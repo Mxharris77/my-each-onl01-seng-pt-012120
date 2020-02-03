@@ -1,10 +1,10 @@
-def my_each (array)
-  array  = ['hi', 'hello', 'bye', 'goodbye']
-    counter = 0
-
-    my_each(words) do |item|
-      expect(item).to equal(words[counter])
-      counter+=1
-    end
+def my_each(array)
+  i = 0
+ 
+  while i < array.length
+    yield(array[i])
+    i = i + 1
   end
+ 
+  array
 end
